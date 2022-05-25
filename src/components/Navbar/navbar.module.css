@@ -1,0 +1,41 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+}
+
+.list a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 2rem;
+  font-size: 1.1rem;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  width: 2rem;
+}
+
+.listContainer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.loginButton {
+  margin-left: auto;
+}
+
+.loginButton li {
+  list-style: none;
+}
+
+.activeStyle {
+  border-bottom: 2px solid #ff6700;
+  border-radius: 3px;
+}
