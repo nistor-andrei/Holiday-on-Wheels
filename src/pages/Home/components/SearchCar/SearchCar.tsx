@@ -22,96 +22,98 @@ const SearchCar: FC = () => {
     <section className={style.searchBox}>
       <LocalizationProvider dateAdapter={AdapterMoment}>
         <h2>Let's find your ideal car</h2>
-        <Box
-          className={style.inputs}
-          sx={{ display: "flex", alignItems: "center" }}
-        >
-          <TextFieldGrey
-            id="outlined-basic"
-            label="Pick-up Location"
-            variant="outlined"
-            fullWidth={true}
-            InputProps={{
-              startAdornment: (
-                <InputAdornment
-                  position="start"
-                  sx={{ backgroundColor: "#232323" }}
-                >
-                  <LocationOnIcon sx={{ color: grey[50] }} />
-                </InputAdornment>
-              ),
-            }}
-          />
-        </Box>
-        <Box
-          className={style.inputs}
-          sx={{ display: "flex", alignItems: "center" }}
-        >
-          <DesktopDatePicker
-            label="Date desktop"
-            inputFormat="DD/MM/yyyy"
-            value={value}
+        <div className={style.form}>
+          <Box
             className={style.inputs}
-            onChange={handleChange}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                fullWidth
-                sx={{
-                  input: {
-                    color: "#fff",
-                  },
-                  label: { color: "#fff" },
-                  backgroundColor: "#232323",
-                  "& .MuiOutlinedInput-root:hover fieldset": {
-                    borderColor: "#ff6600",
-                  },
-                }}
-              />
-            )}
-            InputAdornmentProps={{
-              position: "start",
-              sx: {
-                svg: { color: "#fff" },
-              },
-            }}
-          />
-        </Box>
-        <Box
-          className={style.inputs}
-          sx={{ display: "flex", alignItems: "center" }}
-        >
-          <DesktopDatePicker
-            label="Date desktop"
-            inputFormat="DD/MM/yyyy"
+            sx={{ display: "flex", alignItems: "center" }}
+          >
+            <TextFieldGrey
+              id="outlined-basic"
+              label="Pick-up Location"
+              variant="outlined"
+              fullWidth={true}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment
+                    position="start"
+                    sx={{ backgroundColor: "#232323" }}
+                  >
+                    <LocationOnIcon sx={{ color: grey[50] }} />
+                  </InputAdornment>
+                ),
+              }}
+            />
+          </Box>
+          <Box
             className={style.inputs}
-            value={value}
-            onChange={handleChange}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                fullWidth
-                sx={{
-                  input: {
-                    color: "#fff",
-                  },
-                  "& .MuiOutlinedInput-root:hover fieldset": {
-                    borderColor: "#ff6600",
-                  },
-                  label: { color: "#fff" },
-                  backgroundColor: "#232323",
-                }}
-              />
-            )}
-            InputAdornmentProps={{
-              position: "start",
-              sx: {
-                svg: { color: "#fff" },
-                input: { color: "#fff" },
-              },
-            }}
-          />
-        </Box>
+            sx={{ display: "flex", alignItems: "center" }}
+          >
+            <DesktopDatePicker
+              label="Date desktop"
+              inputFormat="DD/MM/yyyy"
+              value={value}
+              className={style.inputs}
+              onChange={handleChange}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  fullWidth
+                  sx={{
+                    input: {
+                      color: "#fff",
+                    },
+                    label: { color: "#fff" },
+                    backgroundColor: "#232323",
+                    "& .MuiOutlinedInput-root:hover fieldset": {
+                      borderColor: "#ff6600",
+                    },
+                  }}
+                />
+              )}
+              InputAdornmentProps={{
+                position: "start",
+                sx: {
+                  svg: { color: "#fff" },
+                },
+              }}
+            />
+          </Box>
+          <Box
+            className={style.inputs}
+            sx={{ display: "flex", alignItems: "center" }}
+          >
+            <DesktopDatePicker
+              label="Date desktop"
+              inputFormat="DD/MM/yyyy"
+              className={style.inputs}
+              value={value}
+              onChange={handleChange}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  fullWidth
+                  sx={{
+                    input: {
+                      color: "#fff",
+                    },
+                    "& .MuiOutlinedInput-root:hover fieldset": {
+                      borderColor: "#ff6600",
+                    },
+                    label: { color: "#fff" },
+                    backgroundColor: "#232323",
+                  }}
+                />
+              )}
+              InputAdornmentProps={{
+                position: "start",
+                sx: {
+                  svg: { color: "#fff" },
+                  input: { color: "#fff" },
+                },
+              }}
+            />
+          </Box>
+        </div>
       </LocalizationProvider>
       <ButtonLogin className={style.button}>Search</ButtonLogin>
     </section>

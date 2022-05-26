@@ -14,7 +14,7 @@ const Header: FC = () => {
     setVideoSource(amg);
   }
   return (
-    <header>
+    <header className={style.header}>
       <div className={style.layout}>
         <div className={style.textBox}>
           <div className={style.text}>

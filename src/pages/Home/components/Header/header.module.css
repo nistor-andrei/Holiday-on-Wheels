@@ -2,20 +2,34 @@
   width: 100%;
   opacity: 0.2;
   object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  height: 100%;
+}
+
+.header {
+  position: relative;
+  height: 90vh;
 }
 
 .layout {
-  position: absolute;
+  position: relative;
   color: #fff;
   text-align: center;
   font-size: 1rem;
-  top: 52%;
   z-index: 3;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   max-width: 1536px;
   padding: 0 24px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.layout > div:nth-of-type(1) {
+  flex: 1.5;
 }
 
 .textBox {

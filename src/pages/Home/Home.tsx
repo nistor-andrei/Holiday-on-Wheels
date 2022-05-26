@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import { FC } from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import Header from "./components/Header/Header";
+import { CarSlider, Promo, MostPopular, Header } from "./components";
 
 const Home: FC = () => (
   <>
@@ -9,6 +9,11 @@ const Home: FC = () => (
       <Navbar />
     </Container>
     <Header />
+    <Container maxWidth="xl">
+      <Promo />
+      <MostPopular />
+      <CarSlider />
+    </Container>
   </>
 );
 

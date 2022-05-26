@@ -1,0 +1,16 @@
+.text {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  margin-top: 4rem;
+  margin-bottom: 1.25rem;
+}
+
+.text p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text a {
+  color: #5c5c5c;
+}
