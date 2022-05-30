@@ -8,7 +8,8 @@
       "fuelConsumption": 10.8,
       "seats": 4,
       "HP": 503,
-      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653576583/M4-G82_ubjc8x.png"
+      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653576583/M4-G82_ubjc8x.png",
+      "price": 500
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "fuelConsumption": 11.8,
       "seats": 5,
       "HP": 603,
-      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653576583/kindpng_4552467-removebg-preview_cmbbm4.png"
+      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653576583/kindpng_4552467-removebg-preview_cmbbm4.png",
+      "price": 700
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "fuelConsumption": 12.8,
       "seats": 4,
       "HP": 600,
-      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653576583/5a388c2f634f09.7463110815136553434068_ctzud6.png"
+      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653576583/5a388c2f634f09.7463110815136553434068_ctzud6.png",
+      "price": 800
     },
     {
       "id": 4,
@@ -38,7 +41,8 @@
       "fuelConsumption": 7.7,
       "seats": 5,
       "HP": 350,
-      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653576583/imgbin_2018-ford-focus-rs-hatchback-2016-ford-focus-rs-car-png_t2ifbq.png"
+      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653576583/imgbin_2018-ford-focus-rs-hatchback-2016-ford-focus-rs-car-png_t2ifbq.png",
+      "price": 300
     },
     {
       "id": 5,
@@ -48,7 +52,8 @@
       "fuelConsumption": 16,
       "seats": 2,
       "HP": 800,
-      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653576818/pngwing.com-removebg-preview_qeysyc.png"
+      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653664143/pngwing.com-removebg-preview_eybkhf.png",
+      "price": 2000
     },
     {
       "id": 6,
@@ -58,7 +63,8 @@
       "fuelConsumption": 6.9,
       "seats": 5,
       "HP": 330,
-      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653576583/png-clipart-2017-mercedes-benz-s-class-2016-mercedes-benz-s-class-2018-mercedes-benz-s-class-car-mercedes-compact-car-sedan_dyag5z.png"
+      "img": "https://res.cloudinary.com/andreimn/image/upload/v1653664082/Mercedes-Benz-S400-D-2021-2_3_dbeeud.png",
+      "price": 400
     }
   ]
 }

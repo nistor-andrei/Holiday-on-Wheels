@@ -6,6 +6,10 @@
   margin-bottom: 1.25rem;
 }
 
+div.mySwiper {
+  padding: 0 1.7rem;
+}
+
 .text p {
   font-size: 1.25rem;
   font-weight: 300;
@@ -13,4 +17,106 @@
 
 .text a {
   color: #5c5c5c;
+}
+
+.buttons {
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+}
+
+.buttons span {
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+  padding: 0.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.buttons span:hover {
+  color: #ff6600;
+}
+
+.slider {
+  position: relative;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  background-color: #171717;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  min-height: 300px;
+  flex-direction: column;
+}
+
+.card hr {
+  margin-top: 2rem;
+  height: 1px;
+  border: 0;
+  background-color: #222222;
+}
+
+.card__car {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__car > img {
+  width: 200px;
+  align-self: center;
+}
+
+.card__car > p {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.price {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  align-items: center;
+}
+
+.price p {
+  font-size: 1.25rem;
+}
+
+.price a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 0.8rem;
+}
+
+.info {
+  display: flex;
+  color: #626263;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.info__left img {
+  width: 24px;
+}
+
+.info__left p,
+.info__right p {
+  display: flex;
+  align-items: center;
+}
+
+.info__left svg,
+.info__right svg {
+  margin-right: 0.5rem;
 }
