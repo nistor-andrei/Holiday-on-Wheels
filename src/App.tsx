@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./pages";
+import { Home, Rent } from "./pages";
 
 function App(): JSX.Element {
   return (
@@ -7,6 +7,7 @@ function App(): JSX.Element {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/rent" element={<Rent />} />
         </Routes>
       </BrowserRouter>
     </>

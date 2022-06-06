@@ -1,7 +1,5 @@
 import { FC } from "react";
 import { NavLink } from "react-router-dom";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import styles from "./navbar.module.css";
 import logo from "../../assets/Standard Collection 19.svg";
 import { ButtonLogin } from "../reusable/ButtonLogin";
