@@ -10,9 +10,7 @@ export interface CarBrand {
   image: any;
 }
 
-export interface ListOfCarBrand extends Array<CarBrand> {}
-
-export const listOfCarBrand: ListOfCarBrand = [
+export const listOfCarBrand: CarBrand[] = [
   {
     name: "BMW",
     image: bmw,
