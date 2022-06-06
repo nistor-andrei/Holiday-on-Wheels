@@ -12,6 +12,7 @@ import SwiperCore, { Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import { Skeleton } from "@mui/material";
 
 SwiperCore.use([Navigation]);
 
@@ -45,43 +46,155 @@ const CarSlider: FC = () => {
             prevEl: ".custom_prev",
           }}
         >
-          {data.map((car) => {
-            return (
-              <SwiperSlide key={car.id} className={style.card}>
-                <div className={style.card__car}>
-                  <img src={car.img} alt={car.model} />
-                  <p>{car.model}</p>
-                  <div className={style.info}>
-                    <div className={style.info__left}>
-                      <p>
-                        <img src={gearbox} alt="gearbox" />
-                        {car.gearbox}
-                      </p>
-                      <p>
-                        <LocalGasStationIcon />
-                        {car.fuelType}
-                      </p>
-                    </div>
-                    <div className={style.info__right}>
-                      <p>
-                        <SpeedIcon />
-                        {car.HP}HP
-                      </p>
-                      <p>
-                        <AirlineSeatReclineExtraIcon />
-                        {car.seats}
-                      </p>
+          {!loading ? (
+            // @ts-ignore
+            data.map((car) => {
+              return (
+                <SwiperSlide key={car.id} className={style.card}>
+                  <div className={style.card__car}>
+                    {!loading ? (
+                      <img src={car.img} alt={car.model} />
+                    ) : (
+                      <Skeleton
+                        variant="rectangular"
+                        width={210}
+                        height={118}
+                        sx={{
+                          bgcolor: "grey.700",
+                          margin: "2rem 0",
+                          borderRadius: "10px",
+                        }}
+                      />
+                    )}
+                    <p>{car.model}</p>
+                    <div className={style.info}>
+                      <div className={style.info__left}>
+                        <p>
+                          <img src={gearbox} alt="gearbox" />
+                          {car.gearbox}
+                        </p>
+                        <p>
+                          <LocalGasStationIcon />
+                          {car.fuelType}
+                        </p>
+                      </div>
+                      <div className={style.info__right}>
+                        <p>
+                          <SpeedIcon />
+                          {car.HP}HP
+                        </p>
+                        <p>
+                          <AirlineSeatReclineExtraIcon />
+                          {car.seats}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                  <hr />
+                  <div className={style.price}>
+                    <p>${car.price}/per day</p>
+                    <Link to={`/car/${car.id}`}>Rent now &#8594;</Link>
+                  </div>
+                </SwiperSlide>
+              );
+            })
+          ) : (
+            <div className={style.skeletonContainer}>
+              <div className={style.card}>
+                <Skeleton
+                  variant="rectangular"
+                  width={210}
+                  height={118}
+                  sx={{
+                    bgcolor: "grey.700",
+                    margin: "2rem 0",
+                    borderRadius: "10px",
+                  }}
+                />
+                <Skeleton
+                  height={20}
+                  style={{ marginBottom: 6 }}
+                  sx={{ bgcolor: "grey.700" }}
+                />
+                <Skeleton height={20} sx={{ bgcolor: "grey.700" }} />
                 <hr />
-                <div className={style.price}>
-                  <p>${car.price}/per day</p>
-                  <Link to={`/car/${car.id}`}>Rent now &#8594;</Link>
-                </div>
-              </SwiperSlide>
-            );
-          })}
+                <Skeleton
+                  height={20}
+                  sx={{ bgcolor: "grey.700", margin: "1rem 0" }}
+                />
+              </div>
+              <div className={style.card}>
+                <Skeleton
+                  variant="rectangular"
+                  width={210}
+                  height={118}
+                  sx={{
+                    bgcolor: "grey.700",
+                    margin: "2rem 0",
+                    borderRadius: "10px",
+                  }}
+                />
+                <Skeleton
+                  height={20}
+                  style={{ marginBottom: 6 }}
+                  sx={{ bgcolor: "grey.700" }}
+                />
+                <Skeleton height={20} sx={{ bgcolor: "grey.700" }} />
+                <hr />
+                <Skeleton
+                  height={20}
+                  sx={{ bgcolor: "grey.700", margin: "1rem 0" }}
+                />
+              </div>
+              <div className={style.card}>
+                <Skeleton
+                  variant="rectangular"
+                  width={210}
+                  height={118}
+                  sx={{
+                    bgcolor: "grey.700",
+                    margin: "2rem 0",
+                    borderRadius: "10px",
+                  }}
+                />
+                <Skeleton
+                  height={20}
+                  style={{ marginBottom: 6 }}
+                  sx={{ bgcolor: "grey.700" }}
+                />
+                <Skeleton height={20} sx={{ bgcolor: "grey.700" }} />
+                <hr />
+                <Skeleton
+                  height={20}
+                  sx={{ bgcolor: "grey.700", margin: "1rem 0" }}
+                />
+              </div>
+              <div className={style.card}>
+                <Skeleton
+                  variant="rectangular"
+                  width={210}
+                  height={118}
+                  sx={{
+                    bgcolor: "grey.700",
+                    margin: "2rem 0",
+                    borderRadius: "10px",
+                  }}
+                />
+                <Skeleton
+                  height={20}
+                  style={{ marginBottom: 6 }}
+                  sx={{ bgcolor: "grey.700" }}
+                />
+                <Skeleton height={20} sx={{ bgcolor: "grey.700" }} />
+                <hr />
+                <Skeleton
+                  height={20}
+                  sx={{ bgcolor: "grey.700", margin: "1rem 0" }}
+                />
+              </div>
+            </div>
+          )}
+          {}
         </Swiper>
       </div>
     </>
