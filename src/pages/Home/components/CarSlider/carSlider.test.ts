@@ -1,5 +1,4 @@
 import { api } from "../../../../api/testApi";
-import fetch from "isomorphic-fetch";
 
 it("shoud return cars", async () => {
   const cars = await api(fetch);
