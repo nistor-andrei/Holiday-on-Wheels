@@ -1,20 +1,20 @@
 import {
   Accordion,
-  AccordionSummary,
-  Typography,
   AccordionDetails,
-  FormControlLabel,
+  AccordionSummary,
   Checkbox,
+  FormControlLabel,
+  Typography,
 } from "@mui/material";
-import { FC } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { FC } from "react";
 
-const VehicleType: FC = () => {
+const TransmisionType: FC = () => {
   return (
     <Accordion sx={{ backgroundColor: "transparent" }}>
       <AccordionSummary
         expandIcon={
-          <ExpandMoreIcon sx={{ color: "#fff", marginLeft: "1rem" }} />
+          <ExpandMoreIcon sx={{ color: "#fff", marginLeft: "auto" }} />
         }
         aria-controls="panel1bh-content"
         id="panel1bh-header"
@@ -26,7 +26,7 @@ const VehicleType: FC = () => {
             color: "#fff",
           }}
         >
-          Vehicle type
+          Transimision Type
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
@@ -42,21 +42,7 @@ const VehicleType: FC = () => {
                 }}
               />
             }
-            label="Luxury"
-            sx={{ color: "#fff", width: "100%" }}
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                sx={{
-                  color: "#2B2B2B",
-                  "&.Mui-checked": {
-                    color: "var(--orange)",
-                  },
-                }}
-              />
-            }
-            label="Sports"
+            label="Manual"
             sx={{ color: "#fff" }}
           />
           <FormControlLabel
@@ -70,21 +56,7 @@ const VehicleType: FC = () => {
                 }}
               />
             }
-            label="Economy"
-            sx={{ color: "#fff" }}
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                sx={{
-                  color: "#2B2B2B",
-                  "&.Mui-checked": {
-                    color: "var(--orange)",
-                  },
-                }}
-              />
-            }
-            label="Compact"
+            label="Auto"
             sx={{ color: "#fff" }}
           />
         </Typography>
@@ -93,4 +65,4 @@ const VehicleType: FC = () => {
   );
 };
 
-export default VehicleType;
+export default TransmisionType;

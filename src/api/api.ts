@@ -1,4 +1,4 @@
-import { ICars } from "../pages/Home/components/CarSlider/types";
+import { ICars } from "../components/CarCard/types";
 import { Dispatcher } from "../utils/setterTypes";
 
 export const fetchData = (

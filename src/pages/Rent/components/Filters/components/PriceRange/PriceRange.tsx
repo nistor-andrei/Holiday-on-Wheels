@@ -13,13 +13,14 @@ const PriceRange: FC = () => {
   return (
     <Accordion sx={{ backgroundColor: "transparent" }}>
       <AccordionSummary
-        expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+        expandIcon={
+          <ExpandMoreIcon sx={{ color: "#fff", marginLeft: "1rem" }} />
+        }
         aria-controls="panel1bh-content"
         id="panel1bh-header"
       >
         <Typography
           sx={{
-            width: "33%",
             flexShrink: 0,
             textTransform: "uppercase",
             color: "#fff",

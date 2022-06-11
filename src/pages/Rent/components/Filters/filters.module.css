@@ -1,8 +1,25 @@
 .container {
   background-color: var(--grey);
   color: #fff;
+  padding: 2rem 0.5rem;
+  width: 20%;
 }
 
 .title {
+  display: flex;
+  align-items: center;
   padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.count {
+  background-color: var(--orange);
+  margin-left: 1.25rem;
+  width: 20px;
+  height: 20px;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
 }

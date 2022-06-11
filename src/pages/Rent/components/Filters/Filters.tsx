@@ -1,15 +1,21 @@
-import {FC} from "react";
-import {PriceRange, VehicleType} from "./components";
+import { FC } from "react";
+import { PriceRange, VehicleType, TransmisionType } from "./components";
 import style from "./filters.module.css";
 
 const Filters: FC = () => {
-    return (
-        <div className={style.container}>
-            <h3 className={style.title}>Filters</h3>
-            <VehicleType/>
-            <PriceRange/>
-        </div>
-    );
+  const isFiltered = true;
+
+  return (
+    <div className={style.container}>
+      <h3 className={style.title}>
+        Filters
+        {isFiltered && <span className={style.count}>2</span>}
+      </h3>
+      <VehicleType />
+      <PriceRange />
+      <TransmisionType />
+    </div>
+  );
 };
 
 export default Filters;

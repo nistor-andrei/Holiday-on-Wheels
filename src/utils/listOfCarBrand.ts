@@ -4,6 +4,7 @@ import ferrari from "../assets/brand/Ferrari.svg";
 import ford from "../assets/brand/Ford.svg";
 import lamborghini from "../assets/brand/Lamborghini.svg";
 import nissan from "../assets/brand/Nissan.svg";
+import audi from "../assets/brand/Audi.svg";
 
 export interface CarBrand {
   name: string;
@@ -35,4 +36,5 @@ export const listOfCarBrand: CarBrand[] = [
     name: "Nissan",
     image: nissan,
   },
+  { name: "Audi", image: audi },
 ];

@@ -2,7 +2,7 @@ import { FC } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./navbar.module.css";
 import logo from "../../assets/Standard Collection 19.svg";
-import { ButtonLogin } from "../reusable/ButtonLogin";
+import { ButtonLogin } from "../ButtonLogin";
 
 const Navbar: FC = () => {
   return (

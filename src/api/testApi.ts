@@ -1,4 +1,4 @@
-import { ICars } from "../pages/Home/components/CarSlider/types";
+import { ICars } from "../components/CarCard/types";
 
 export const api = (fetch: (arg0: string) => Promise<{ json: () => any }>) => {
   return fetch("http://localhost:3001/cars")

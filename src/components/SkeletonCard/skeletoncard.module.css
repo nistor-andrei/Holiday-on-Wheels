@@ -1,0 +1,15 @@
+.skeletonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  background-color: #171717;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  min-height: 300px;
+  flex-direction: column;
+}

@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.list li {
+  list-style: none;
+}
+
+.list img {
+  background-color: #232323;
+  filter: grayscale(1);
+  padding: 1rem 4rem;
+  width: 180px;
+  border-radius: 10px;
+}
+
+.brandsContainer {
+  margin-left: 2rem;
+}
+
+.list img:hover {
+  background-color: var(--orange);
+  filter: none;
+  cursor: pointer;
+}
