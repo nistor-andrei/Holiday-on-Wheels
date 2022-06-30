@@ -8,8 +8,9 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { FC } from "react";
+import { IActiveFilters } from "../../Filters";
 
-const TransmisionType: FC = () => {
+const TransmisionType: FC<IActiveFilters> = ({ changeCounterFilters }) => {
   return (
     <Accordion sx={{ backgroundColor: "transparent" }}>
       <AccordionSummary
@@ -34,6 +35,7 @@ const TransmisionType: FC = () => {
           <FormControlLabel
             control={
               <Checkbox
+                onChange={changeCounterFilters}
                 sx={{
                   color: "#2B2B2B",
                   "&.Mui-checked": {
@@ -48,6 +50,7 @@ const TransmisionType: FC = () => {
           <FormControlLabel
             control={
               <Checkbox
+                onChange={changeCounterFilters}
                 sx={{
                   color: "#2B2B2B",
                   "&.Mui-checked": {

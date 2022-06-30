@@ -6,6 +6,7 @@ import theme from "./Theme/globalStyles";
 import "./index.css";
 import { Provider } from "react-redux";
 import { store } from "./rtk-store/store";
+import { Toaster } from "react-hot-toast";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,6 +16,7 @@ root.render(
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <App />
+        <Toaster />
       </ThemeProvider>
     </Provider>
   </React.StrictMode>

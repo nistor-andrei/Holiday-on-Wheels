@@ -6,15 +6,15 @@ const Brands: FC = () => {
   return (
     <div className={style.brandsContainer}>
       <ul className={style.list}>
-        {listOfCarBrand.map((carBrand: CarBrand, index): ReactNode => {
-          if (carBrand.name !== "Nissan") {
+        {listOfCarBrand
+          .filter((carBrand) => carBrand.name !== "Nissan")
+          .map((carBrand: CarBrand, index): ReactNode => {
             return (
               <li key={index}>
                 <img src={carBrand.image} alt={carBrand.name} />
               </li>
             );
-          }
-        })}
+          })}
       </ul>
     </div>
   );

@@ -1,20 +1,15 @@
-import { useEffect, useState } from "react";
-import { fetchData } from "../../../../api/api";
-import { ICars } from "../../../../components/CarCard/types";
-import { defaultCars } from "../../../Home/components/CarSlider/types";
+import { CarCard } from "../../../../components";
+import { useGetCarsQuery } from "../../../../rtk-store/services/cars";
+import style from "./carslist.module.css";
 
 const CarsList = () => {
-  const [data, setData] = useState<ICars[]>(defaultCars);
-  const [loading, setLoading] = useState<boolean>(false);
-  useEffect(() => {
-    setLoading(true);
-    fetchData(setData, setLoading);
-  }, []);
-
+  const { data } = useGetCarsQuery();
   return (
-    <div>
-      <h1>CarsList</h1>
-    </div>
+    <section className={style.list}>
+      {data?.map((car) => {
+        return <CarCard car={car} key={car.id} />;
+      })}
+    </section>
   );
 };
 

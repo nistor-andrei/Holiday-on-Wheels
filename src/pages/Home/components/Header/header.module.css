@@ -81,8 +81,10 @@
   margin-right: 0.5rem;
 }
 
-.carControler a {
-  color: #fff;
+.carController a {
+  margin-top: 0.25rem;
+  color: #fffaff;
+  text-underline-offset: 2px;
 }
 
 .carControler p {
@@ -91,4 +93,8 @@
 
 .buttons {
   margin-top: 1rem;
+}
+
+.buttons button:first-child {
+  margin-right: 0.5rem;
 }

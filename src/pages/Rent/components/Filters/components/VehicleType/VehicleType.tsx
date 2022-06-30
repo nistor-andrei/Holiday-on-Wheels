@@ -8,8 +8,9 @@ import {
 } from "@mui/material";
 import { FC } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { IActiveFilters } from "../../Filters";
 
-const VehicleType: FC = () => {
+const VehicleType: FC<IActiveFilters> = ({ changeCounterFilters }) => {
   return (
     <Accordion sx={{ backgroundColor: "transparent" }}>
       <AccordionSummary
@@ -34,6 +35,7 @@ const VehicleType: FC = () => {
           <FormControlLabel
             control={
               <Checkbox
+                onChange={changeCounterFilters}
                 sx={{
                   color: "#2B2B2B",
                   "&.Mui-checked": {
@@ -48,6 +50,7 @@ const VehicleType: FC = () => {
           <FormControlLabel
             control={
               <Checkbox
+                onChange={changeCounterFilters}
                 sx={{
                   color: "#2B2B2B",
                   "&.Mui-checked": {
@@ -62,6 +65,7 @@ const VehicleType: FC = () => {
           <FormControlLabel
             control={
               <Checkbox
+                onChange={changeCounterFilters}
                 sx={{
                   color: "#2B2B2B",
                   "&.Mui-checked": {
@@ -76,6 +80,7 @@ const VehicleType: FC = () => {
           <FormControlLabel
             control={
               <Checkbox
+                onChange={changeCounterFilters}
                 sx={{
                   color: "#2B2B2B",
                   "&.Mui-checked": {

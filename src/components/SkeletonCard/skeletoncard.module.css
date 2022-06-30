@@ -13,3 +13,10 @@
   min-height: 300px;
   flex-direction: column;
 }
+
+.card hr {
+  margin-top: 2rem;
+  height: 1px;
+  border: 0;
+  background-color: #222222;
+}
