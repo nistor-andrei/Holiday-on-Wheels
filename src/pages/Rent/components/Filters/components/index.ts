@@ -1,3 +1,3 @@
 export { VehicleType } from "./VehicleType";
-export { PriceRange } from "./PriceRange";
+export { FuelType } from "./FuelType";
 export { TransmisionType } from "./TransmisionType";

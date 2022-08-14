@@ -1,37 +1,31 @@
-import { ChangeEvent, FC, useCallback, useState } from "react";
-import { PriceRange, VehicleType, TransmisionType } from "./components";
+import { FC, useMemo } from "react";
+import { useAppSelector } from "../../../../rtk-store/hooks";
+import { countActiveFilters } from "../../utils/countActiveFilters";
+import { useIsFilterEmpty } from "../../utils/useIsFilterEmpty";
+import { FuelType, VehicleType, TransmisionType } from "./components";
 import style from "./filters.module.css";
-
-export interface IActiveFilters {
-  changeCounterFilters: (event: ChangeEvent<HTMLInputElement>) => void;
-}
 
 const Filters: FC = () => {
   // count how many filters are active
-  const [activeFilters, setActiveFilters] = useState<number>(0);
+  const countFilters = useAppSelector((select) => select.filterSlice);
+  const isFilterEmpty = useIsFilterEmpty();
 
-  const handleChange = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      if (event.target.checked) {
-        setActiveFilters((prev) => prev + 1);
-      } else {
-        setActiveFilters((prev) => prev - 1);
-      }
-    },
-    [setActiveFilters]
+  const activeFiltersVale = useMemo(
+    () => countActiveFilters(countFilters),
+    [countFilters]
   );
 
   return (
     <div className={style.container}>
       <h3 className={style.title}>
         Filters
-        {activeFilters > 0 && (
-          <span className={style.count}>{activeFilters}</span>
+        {!isFilterEmpty && (
+          <span className={style.count}>{activeFiltersVale}</span>
         )}
       </h3>
-      <VehicleType changeCounterFilters={handleChange} />
-      <PriceRange changeCounterFilters={handleChange} />
-      <TransmisionType changeCounterFilters={handleChange} />
+      <VehicleType />
+      <FuelType />
+      <TransmisionType />
     </div>
   );
 };

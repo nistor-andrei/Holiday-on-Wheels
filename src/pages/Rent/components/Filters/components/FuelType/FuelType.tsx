@@ -1,31 +1,31 @@
 import {
   Accordion,
-  AccordionDetails,
   AccordionSummary,
+  Typography,
+  AccordionDetails,
   FormControlLabel,
   Radio,
   RadioGroup,
-  Typography,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { FC } from "react";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useAppDispatch } from "../../../../../../rtk-store/hooks";
-import { setTransmisionType } from "../../../../../../rtk-store/actions/filterSlice";
+import { setFuelType } from "../../../../../../rtk-store/actions/filterSlice";
 
-const TransmisionType: FC = () => {
+const FuelType: FC = () => {
   const dispatch = useAppDispatch();
   function setValue(event: any, value: string) {
     if (event.target.checked) {
-      dispatch(setTransmisionType(value));
+      dispatch(setFuelType(value));
     } else {
-      dispatch(setTransmisionType(""));
+      dispatch(setFuelType(""));
     }
   }
   return (
     <Accordion sx={{ backgroundColor: "transparent" }}>
       <AccordionSummary
         expandIcon={
-          <ExpandMoreIcon sx={{ color: "#fff", marginLeft: "auto" }} />
+          <ExpandMoreIcon sx={{ color: "#fff", marginLeft: "1rem" }} />
         }
         aria-controls="panel1bh-content"
         id="panel1bh-header"
@@ -37,20 +37,17 @@ const TransmisionType: FC = () => {
             color: "#fff",
           }}
         >
-          Transimision Type
+          Fuel Type
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
         <div className="boxFilter">
-          <RadioGroup
-            aria-labelledby="transmission"
-            name="radio-buttons-transmission"
-          >
+          <RadioGroup aria-labelledby="fuelType" name="radio-buttons-fuelType">
             <FormControlLabel
-              value="Manual"
+              value="Diesel"
               control={
                 <Radio
-                  onClick={(e) => setValue(e, "Manul")}
+                  onClick={(e) => setValue(e, "Diesel")}
                   sx={{
                     color: "#2B2B2B",
                     "&.Mui-checked": {
@@ -59,14 +56,14 @@ const TransmisionType: FC = () => {
                   }}
                 />
               }
-              label="Manual"
+              label="Diesel"
               sx={{ color: "#fff" }}
             />
             <FormControlLabel
-              value="Automatic"
+              value="Petrol"
               control={
                 <Radio
-                  onClick={(e) => setValue(e, "Automatic")}
+                  onClick={(e) => setValue(e, "Petrol")}
                   sx={{
                     color: "#2B2B2B",
                     "&.Mui-checked": {
@@ -75,7 +72,7 @@ const TransmisionType: FC = () => {
                   }}
                 />
               }
-              label="Automatic"
+              label="Petrol"
               sx={{ color: "#fff" }}
             />
           </RadioGroup>
@@ -85,4 +82,4 @@ const TransmisionType: FC = () => {
   );
 };
 
-export default TransmisionType;
+export default FuelType;

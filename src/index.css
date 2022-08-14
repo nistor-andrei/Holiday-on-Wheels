@@ -1,24 +1,29 @@
 :root {
-    --grey: #171717;
-    --orange: #ff6600;
+  --grey: #171717;
+  --orange: #ff6600;
 }
 
 *,
 html,
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
-    background-color: #121212;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
 }
 
 .orange-span {
-    color: #ff6600;
+  color: #ff6600;
+}
+
+.boxFilter {
+  display: flex;
+  flex-direction: column;
 }

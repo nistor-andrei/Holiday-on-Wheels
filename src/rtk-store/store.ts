@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import filterSlice from "./actions/filterSlice";
 import { carsApi } from "./services/cars";
 
 export const store = configureStore({
   reducer: {
     [carsApi.reducerPath]: carsApi.reducer,
+    filterSlice,
   },
   devTools: process.env.NODE_ENV !== "production",
   middleware: (getDefaultMiddleware) =>

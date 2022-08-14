@@ -8,4 +8,5 @@ export interface ICars {
   price: number;
   seats: number;
   HP: number;
+  classType: string;
 }
