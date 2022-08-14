@@ -50,7 +50,7 @@ const TransmisionType: FC = () => {
               value="Manual"
               control={
                 <Radio
-                  onClick={(e) => setValue(e, "Manul")}
+                  onClick={(e) => setValue(e, "Manual")}
                   sx={{
                     color: "#2B2B2B",
                     "&.Mui-checked": {
