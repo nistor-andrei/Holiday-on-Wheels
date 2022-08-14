@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { CarCard } from "../../../../components";
 import { useAppSelector } from "../../../../rtk-store/hooks";
 import { useGetCarsQuery } from "../../../../rtk-store/services/cars";
@@ -20,24 +21,33 @@ const CarsList = () => {
     return car.gearbox === filterCars.transmisionType;
   });
 
+  // list the cars by filters
+  const filteredCars = useMemo(() => {
+    if (isFilterEmpty) {
+      return data;
+    } else if (filterCars.vehicleType) {
+      return filterByClassType;
+    } else if (filterCars.fuelType) {
+      return filterByFuelType;
+    } else if (filterCars.transmisionType) {
+      return filterByTransmissionType;
+    }
+  }, [
+    data,
+    filterByClassType,
+    filterByFuelType,
+    filterByTransmissionType,
+    filterCars.fuelType,
+    filterCars.transmisionType,
+    filterCars.vehicleType,
+    isFilterEmpty,
+  ]);
+
   return (
     <section className={style.list}>
-      {isFilterEmpty &&
-        data?.map((car, index) => {
-          return <CarCard car={car} key={index} />;
-        })}
-      {filterCars.vehicleType !== "" &&
-        filterByClassType?.map((car, index) => {
-          return <CarCard car={car} key={index} />;
-        })}
-      {filterCars.fuelType !== "" &&
-        filterByFuelType?.map((car, index) => {
-          return <CarCard car={car} key={index} />;
-        })}
-      {filterCars.transmisionType !== "" &&
-        filterByTransmissionType?.map((car, index) => {
-          return <CarCard car={car} key={index} />;
-        })}
+      {filteredCars?.map((car, index) => (
+        <CarCard key={index} car={car} />
+      ))}
     </section>
   );
 };

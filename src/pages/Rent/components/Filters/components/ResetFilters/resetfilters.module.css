@@ -1,0 +1,26 @@
+.resetBtn {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  background-color: #ff6600;
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: white;
+  transition: all 150ms ease;
+  cursor: pointer;
+  border: none;
+}
+
+.resetBtn:hover {
+  background-color: #cc5200;
+}
+
+.resetBtn:active {
+  background-color: #993d00;
+}
+
+.resetBtn:focus {
+  box-shadow: 0 4px 20px 0 rgba(61, 71, 82, 0.1),
+    0 0 0 5px rgba(0, 127, 255, 0.5);
+  outline: none;
+}
