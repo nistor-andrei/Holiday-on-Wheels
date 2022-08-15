@@ -6,7 +6,7 @@ import style from "./rent.module.css";
 
 const Rent: FC = () => {
   return (
-    <Container maxWidth="xl">
+    <Container sx={{ maxWidth: "1700px" }} maxWidth={false}>
       <Navbar />
       <Promo />
       <div className={style.rentContainer}>

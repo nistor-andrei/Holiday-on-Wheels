@@ -20,8 +20,6 @@ const Filters: FC = () => {
     [countFilters]
   );
 
-  console.log(countFilters);
-
   return (
     <div className={style.container}>
       <h3 className={style.title}>
