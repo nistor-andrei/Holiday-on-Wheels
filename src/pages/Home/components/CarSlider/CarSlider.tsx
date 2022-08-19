@@ -20,7 +20,7 @@ const CarSlider: FC = () => {
     }
   }, [error]);
 
-  console.log(error);
+  
 
   return (
     <>
